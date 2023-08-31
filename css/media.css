@@ -1,0 +1,136 @@
+@media (max-width: 600px) {
+
+    .header {
+        padding: 20px 7%;
+        /* overflow: hidden; */
+        /* position: fixed; */
+    }
+
+    /* .head2{
+        align-items: start;
+    } */
+
+    .logo img {
+        width: 12vw;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        top: 50px;
+        text-align: end;
+        left: 0;
+        padding: 5vw 7% 0 7%;
+        width: 100%;
+        border-bottom: 2px solid #00abf0;
+        background-color: rgb(8, 19, 28);
+        z-index: -1;
+    }
+
+
+    /* This class is used for opening and closing the dropdown menu when we click on side button this class is enabled when we click on it again this class gets disabled */
+    .active-nav {
+        display: block;
+    }
+
+
+    .navbar a {
+        display: block;
+        margin: 1vh 0;
+        padding-bottom: 0.2vw;
+        font-size: 3vw;
+        /* Paused the animation and make sure opacity is set to 1 */
+        animation-play-state: paused;
+        opacity: 1;
+        color: white;
+    }
+
+    .header i {
+        display: inline-block;
+        font-size: 8vw;
+        animation-name: slideLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+        /* animation-delay: 1s; */
+    }
+
+
+    /* HOME----------------------- */
+
+    #home {
+        flex-direction: column-reverse;
+        padding: 5vw 5%;
+        margin-top: 20vh;
+    }
+
+    .home-content {
+        text-align: center;
+        width: 100%;
+        margin-top: 4vh;
+    }
+
+    .home-content h1 {
+        font-size: 8vw;
+    }
+
+    .home-content h3 {
+        font-size: 5vw;
+    }
+
+    .home-content p {
+        font-size: 2vw;
+    }
+
+    .social-media a {
+        font-size: 4vw;
+        padding: 3vw;
+        margin: 0 1vw 2vh 1vw;
+        border: 0.5vw solid #00abf0;
+    }
+
+    .btn {
+        font-size: 2.5vw;
+        padding: 2vw 4vw;
+    }
+
+    #home .home-img {
+        width: 60%;
+        margin-bottom: 2vh;
+        justify-content: center;
+    }
+
+    #skills {
+        margin: 15vh 10% 5vh 10%;
+        box-shadow: 1px 0 10px black;
+    }
+
+    #skills h2 {
+        font-size: 5vw;
+    }
+
+    #skills .skill-name {
+        font-size: 3vw;
+    }
+
+    .ri-html5-fill {
+        color: orange;
+        font-size: 5vw;
+    }
+
+    .ri-css3-fill {
+        color: #00abf0;
+        font-size: 5vw;
+    }
+
+    .ri-javascript-fill {
+        color: yellow;
+        font-size: 5vw;
+    }
+
+    .fa-node {
+        font-size: 5vw;
+        color: green;
+    }
+
+}
