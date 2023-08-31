@@ -365,7 +365,6 @@ span{
 .skill-per{
     border-radius: 5px;
     height: 1vw;
-    position: relative;
     animation: toRight 3s ease-in-out forwards;
     width: 0;
 }
@@ -376,28 +375,29 @@ span{
     }
 }
 
+/* There is no space between .skill-per and .html means that by doing this we are targetting the same element we can also writr just .html and this is another way */
 
-.html{
+.skill-per.html{
     background-color: orange;   
 }
 
-.css{
+.skill-per.css{
     background-color: #00abf0;
 }
 
-.js{
+.skill-per.js{
     background-color: yellow;
 }
 
-.node{
+.skill-per.node{
     background-color: greenyellow;
 }
 
-@keyframes toRight{
+/* @keyframes toRight{
     100%{
         width: 100%;
     }
-}
+} */
 
 
 /* Animations */

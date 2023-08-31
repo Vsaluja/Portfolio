@@ -1,14 +1,18 @@
 
 // <!-- Used typed.js for the frontend dev, full stack dev etc. gave h3 multi-text class -->
 
-const typed = new Typed(".multi-text",{
-    strings: ["Full Stack Developer", "Frontend Developer", "Gamer"],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true
+setTimeout(() => {
+    const typed = new Typed(".multi-text",{
+        strings: ["Full Stack Developer", "Frontend Developer", "Web Developer"],
+        typeSpeed: 50,
+        backSpeed: 20,
+        backDelay: 3000,
+        loop: true
+    
+    })
+}, 1500);
 
-})
+
 
     // Typed is an object below is the other way of doing it
     // const typed = new Typed(".multi-text");
