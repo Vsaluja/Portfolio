@@ -22,16 +22,20 @@ const typed = new Typed(".multi-text",{
 
 // Menu btn
     
-    const menu_btn = document.querySelector(".menu-btn");
+    const menu_btn = document.querySelectorAll(".menu-btn");
     const nav = document.querySelector(".navbar");
     const nav_a = document.querySelectorAll(".navbar>a");
     
+    menu_btn.forEach((value) => {
 
-    menu_btn.addEventListener('click', ()=>{
-        
-        nav.classList.toggle('active-nav');
-        
+        value.addEventListener('click', () => {
+            nav.classList.toggle('active-nav');
+            document.querySelector('.icon').classList.remove('icon')
+            value.classList.add('icon');
+        })
     })
+    
+
     
     // For all the elements of a inside the navbar. When we click on any a element like home, skills, portfolio etc it will toggle the .active-nav class if it is enabled it will disable it means it will close the drop down menu after clicking on the a elements
     
@@ -42,5 +46,11 @@ const typed = new Typed(".multi-text",{
             // Below code is for home, skills etc to look active when we click on any a element it will be highlighted and the previous element which was highlighted will not be highlighted anymore
             document.querySelector('.active').classList.remove('active')
             a.classList.add('active');
+
+            // If we click on skill, home, portfolio etc it was not getting back the 3 lines and the X mark was staying so now when we click on skills or any other a element it changes the icon back to normal
+            menu_btn.forEach((value) => {
+            document.querySelector('.icon').classList.remove('icon')
+            value.classList.add('icon');
+        })
         })
     })

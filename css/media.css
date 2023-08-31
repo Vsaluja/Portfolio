@@ -2,8 +2,8 @@
 
     .header {
         padding: 20px 7%;
-        /* overflow: hidden; */
-        /* position: fixed; */
+        flex-direction: column;
+        align-items: start;
     }
 
     /* .head2{
@@ -14,40 +14,39 @@
         width: 12vw;
     }
 
-    .navbar {
-        display: none;
-        position: absolute;
-        top: 50px;
-        text-align: end;
-        left: 0;
-        padding: 5vw 7% 0 7%;
-        width: 100%;
-        border-bottom: 2px solid #00abf0;
-        background-color: rgb(8, 19, 28);
-        z-index: -1;
-    }
-
+    
 
     /* This class is used for opening and closing the dropdown menu when we click on side button this class is enabled when we click on it again this class gets disabled */
-    .active-nav {
-        display: block;
+    
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 2vw 0;
     }
 
+    .active-nav {
+        display: flex;
+    }
 
     .navbar a {
         display: block;
         margin: 1vh 0;
         padding-bottom: 0.2vw;
         font-size: 3vw;
-        /* Paused the animation and make sure opacity is set to 1 */
-        animation-play-state: paused;
-        opacity: 1;
+        animation-duration: 0.4s;
         color: white;
     }
 
     .header i {
-        display: inline-block;
-        font-size: 8vw;
+        /* This icon will take top and right from it's parent and not html because the parent is already declared a position */
+        position: absolute;
+        top: 1.3rem;
+        font-size: 7vw;
+        right: 3rem;
+        display: block;
         animation-name: slideLeft;
         animation-duration: 1s;
         animation-timing-function: ease;
@@ -55,6 +54,9 @@
         /* animation-delay: 1s; */
     }
 
+    .header .icon{
+        display: none;
+    }
 
     /* HOME----------------------- */
 

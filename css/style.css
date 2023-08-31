@@ -105,12 +105,12 @@ body{
 /* ------------------HOME---------------- */
 #home{
     /* used margin top 20vh because while making it responsive when the screen size is reduced the vertical height increases so it maintains the margin well rather than vw because whem screen size because smaller the viewport width recuces and height increases */
-    margin-top: 15vh;
+    margin-top: 20vh;
     /* margin-top: 9vmax; */
     position: relative;
     width: 100%;
     /* height: 80vh;   */
-    padding: 2.5vw 10%;
+    padding: 4vw 10%;
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
