@@ -1,6 +1,8 @@
 
 // <!-- Used typed.js for the frontend dev, full stack dev etc. gave h3 multi-text class -->
 
+// ----------------------------------------------- Typed.JS (All Devices) -------------------------------------------------------
+
 setTimeout(() => {
     const typed = new Typed(".multi-text",{
         strings: ["Full Stack Developer", "Frontend Developer", "Web Developer"],
@@ -13,7 +15,6 @@ setTimeout(() => {
 }, 1500);
 
 
-
     // Typed is an object below is the other way of doing it
     // const typed = new Typed(".multi-text");
 
@@ -24,29 +25,34 @@ setTimeout(() => {
     // typed.loop = true;
 
 
-// Menu btn
+// --------------------------------------------Menu btn (Mobile devices)------------------------------------------------------------
     
+    // Below code will toggle the active-nav class when we click on menu button the drop down menu will show for mobile devices also it will replace the 3line menu icon with X mark.
+
     const menu_btn = document.querySelectorAll(".menu-btn");
-    const nav = document.querySelector(".navbar");
-    const nav_a = document.querySelectorAll(".navbar>a");
+    const navbar = document.querySelector(".navbar");
     
     menu_btn.forEach((value) => {
-
+        
         value.addEventListener('click', () => {
-            nav.classList.toggle('active-nav');
+            navbar.classList.toggle('active-nav');
+            // icon replacement code, whichever i element has .icon class will display none and the other will display block
             document.querySelector('.icon').classList.remove('icon')
             value.classList.add('icon');
         })
     })
     
-
     
+    // --------------------------------------------- Menu Bar related (Mobile devices)-------------------------------------------
+
+    const nav_a = document.querySelectorAll(".navbar>a");
+
     // For all the elements of a inside the navbar. When we click on any a element like home, skills, portfolio etc it will toggle the .active-nav class if it is enabled it will disable it means it will close the drop down menu after clicking on the a elements
     
+
     nav_a.forEach((a)=>{
-        // a.classList.add('active');
         a.addEventListener('click', ()=>{
-            nav.classList.toggle('active-nav');
+            navbar.classList.toggle('active-nav');
             // Below code is for home, skills etc to look active when we click on any a element it will be highlighted and the previous element which was highlighted will not be highlighted anymore
             document.querySelector('.active').classList.remove('active')
             a.classList.add('active');
@@ -58,3 +64,37 @@ setTimeout(() => {
         })
         })
     })
+
+// ----------------------------------------------- Animate On Scroll (All Devices) ----------------------------------------------
+// Data-aos zooms in the entire element box when scrolling down data-aos is added in id=skills section
+AOS.init();
+
+
+
+
+// ---------------------------------------- Skill bar loading on Scroll (All Devices) ---------------------------------------------
+
+const skillsElement = document.getElementById('skills');
+const skillPer = document.querySelectorAll('.skill-per');
+
+window.addEventListener('scroll', ()=>{
+
+    const screenPos = window.innerHeight;
+    const skillElementPos = skillsElement.getBoundingClientRect().top;
+
+    skillPer.forEach((value)=>{
+
+        if(screenPos > skillElementPos){
+            value.style.animation = "toRight 3s ease-in-out forwards";
+        }
+        else{
+            value.style.animation = "none";
+        }
+
+    })
+
+})
+
+
+
+

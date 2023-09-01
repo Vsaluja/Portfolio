@@ -34,24 +34,26 @@
     .navbar a {
         display: block;
         margin: 1vh 0;
-        padding-bottom: 0.2vw;
-        font-size: 3vw;
-        animation-duration: 0.4s;
+        padding-bottom: 3vw;
+        width: 100%;
+        text-align: center;
+        font-size: 4vw;
+        animation-duration: 0.3s;
         color: white;
     }
+
 
     .header i {
         /* This icon will take top and right from it's parent and not html because the parent is already declared a position */
         position: absolute;
         top: 1.3rem;
-        font-size: 7vw;
+        font-size: 8vw;
         right: 3rem;
         display: block;
         animation-name: slideLeft;
-        animation-duration: 1s;
+        animation-duration: 0.5s;
         animation-timing-function: ease;
         animation-fill-mode: forwards;
-        /* animation-delay: 1s; */
     }
 
     .header .icon{
@@ -83,16 +85,21 @@
     .home-content p {
         font-size: 2vw;
     }
+    
+    .social-media{
+        display: flex;
+        justify-content: center;
+    }
 
-    .social-media a {
-        font-size: 4vw;
-        padding: 3vw;
+    .social-media a i{
+        font-size: 5vw;
+        padding: 2vw;
         margin: 0 1vw 2vh 1vw;
-        border: 0.5vw solid #00abf0;
+        border: 1vw solid #00abf0;
     }
 
     .btn {
-        font-size: 2.5vw;
+        font-size: 3.5vw;
         padding: 2vw 4vw;
     }
 

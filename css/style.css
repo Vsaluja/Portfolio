@@ -17,6 +17,8 @@ body{
     color: white;
 }
 
+/* --------------------------------------------------- Header ------------------------------------------------------------------ */
+
 .header{
     position: fixed;
     top: 0;
@@ -45,16 +47,7 @@ body{
     animation-fill-mode: forwards;
 }
 
-@keyframes slideRight{
-    0%{
-        transform: translateX(-200px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
+
 
 .logo img{
     width: 7vw;
@@ -80,16 +73,6 @@ body{
     color: #00abf0;
 }
 
-@keyframes slideTop{
-    0%{
-        transform: translateY(50px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
 
 .navbar a:hover{
     color: #00abf0;
@@ -102,7 +85,8 @@ body{
 }
 
 
-/* ------------------HOME---------------- */
+/* ------------------------------------------------------------ HOME ------------------------------------------------------------ */
+
 #home{
     /* used margin top 20vh because while making it responsive when the screen size is reduced the vertical height increases so it maintains the margin well rather than vw because whem screen size because smaller the viewport width recuces and height increases */
     margin-top: 20vh;
@@ -115,6 +99,8 @@ body{
     /* justify-content: space-between; */
     align-items: center;
 }
+
+/* --------------------------------------------------- Home Content (Left side) ------------------------------------------------- */
 
 .home-content{
     width: 55%;
@@ -134,17 +120,6 @@ body{
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     animation-delay: 1s;
-}
-
-@keyframes slideBottom{
-    0%{
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
 }
 
 
@@ -181,16 +156,7 @@ body{
     animation-delay: 0.8s;
 }
 
-@keyframes slideLeft{
-    0%{
-        transform: translateX(200px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-}
+
 
 span{
     color: #00abf0;
@@ -207,79 +173,46 @@ span{
     animation-delay: 1s;
 }
 
-.social-media a{
-    display: inline-flex;
-    width: 2.5vw;
-    height: 2.5vw;
-    font-size: 1.5vw;
-    background: transparent;
-    border: 0.3vw solid #00abf0;
-    border-radius: 50%;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    padding: 1.2vw 1.2vw;
-    color: #00abf0;
-    margin: 1vw 0 2vw 0.6vw;
-    /* Animation */
-    opacity: 0;
-    animation-name: slideLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-    animation-delay: calc(0.2s * var(--i));
+.social-media{
+    margin: 0vw 0 3vw 0;
+    display: flex;
+    padding: 0.5vw 0 1vw 0;   
 }
 
-
-/* OR */
-
-.social-media a:hover{
-    color: #1f242d;
-    background-color: #00abf0;
-    transition: 0.4s ease;
-    box-shadow: 0px 0px 20px #00abf0;
-}
-
-/* .social-media{
-    margin: 2vw 0;
-
-}
 .social-media a i{
+    border: 0.3vw solid #00abf0;
+    padding: 0.6vw;
+    border-radius: 50px;
+    margin-right: 1vw;
     font-size: 1.5vw;
-    color: var(--col-blue);
-    border: 0.2vw solid var(--col-blue);
-    padding: 0.7vw;
-    margin: 0vw 0vw 0vw 0.5vw;
-    border-radius: 40px;
+    color: #00abf0;
 }
 
 .social-media a i:hover{
     color: #1f242d;
+    box-shadow: 5px 0 20px #00abf0;
     background-color: #00abf0;
-    transition: 0.4s ease;
-    box-shadow: 0px 0px 20px #00abf0;
-} */
-
-/* By default anchor tag's display is inline that's why we have made it inline-block margin and padding doesn't work on elements which are only inline*/
-.btn{
-    display: inline-block;
-    padding: 1vw 2vw;
-    background-color: #00abf0;
-    border-radius: 40px;
-    box-shadow: 0px 0px 5px #00abf0;
-    color: white;
-    text-decoration: none;
-    font-size: 1vw;
-    font-weight: 600;
-   /* // Animation */
-    opacity: 0;
-    animation-name: slideTop;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
+    transition: 0.4s;
 }
 
+.btn{
+    color: white;
+    border: 0.2vw solid #00abf0;
+    padding: 1vw 2vw;
+    background-color: #00abf0;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.2vw;
+    box-shadow: 5px 0 20px #00abf0;
+    font-weight: 600;
+
+}
+
+
+/* By default anchor tag's display is inline that's why we have made it inline-block margin and padding doesn't work on elements which are only inline*/
+
+
+/* ------------------------------------------------------ Home-IMG (Right Side) -------------------------------------------------- */
 
 #home .home-img{
     width: 45%;
@@ -300,7 +233,7 @@ span{
 }
 
 
-    /* SKills Section */
+/*----------------------------------------------------- SKills Section -----------------------------------------------------------*/
 
 #skills{
     /* border: 1px solid red; */
@@ -336,23 +269,6 @@ span{
     font-weight: 500;
 }
 
-.ri-html5-fill{
-    color: orange;
-    font-size: 2vw;
-}
-.ri-css3-fill{
-    color: #00abf0;
-    font-size: 2vw;
-}
-.ri-javascript-fill{
-    color: yellow;
-    font-size: 2vw;
-}
-
-.fa-node{
-    font-size: 2vw;
-    color: green;
-}
 
 .skill-bar{
     background-color: rgb(26, 30, 37);
@@ -365,15 +281,13 @@ span{
 .skill-per{
     border-radius: 5px;
     height: 1vw;
-    animation: toRight 3s ease-in-out forwards;
+    /* Animation added in JS */
+    /* animation: toRight 3s ease-in-out forwards; */
     width: 0;
 }
 
-@keyframes toRight{
-    100%{
-        width: 100%;
-    }
-}
+
+
 
 /* There is no space between .skill-per and .html means that by doing this we are targetting the same element we can also writr just .html and this is another way */
 
@@ -393,14 +307,80 @@ span{
     background-color: greenyellow;
 }
 
-/* @keyframes toRight{
-    100%{
-        width: 100%;
-    }
-} */
+/* colors for language icons*/
+.ri-html5-fill{
+    color: orange;
+    font-size: 2vw;
+}
+.ri-css3-fill{
+    color: #00abf0;
+    font-size: 2vw;
+}
+.ri-javascript-fill{
+    color: yellow;
+    font-size: 2vw;
+}
+
+.fa-node{
+    font-size: 2vw;
+    color: green;
+}
 
 
 /* Animations */
+
+@keyframes slideTop{
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideBottom{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft{
+    0%{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+/* Skill bars */
+@keyframes toRight{
+    100%{
+        width: 100%;
+    }
+}
 
 @keyframes zoomIn{
     0%{
