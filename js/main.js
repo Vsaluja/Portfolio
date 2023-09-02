@@ -94,7 +94,13 @@ setTimeout(() => {
     window.addEventListener('scroll', () => {
 
         // We can try both window.innerheigh pageYoffset but window.innerHeight-100 or innerHeigh/2 works better
-        const screenPos = (window.innerHeight)-100;
+        if (window.screen.width < 600) {
+            console.log('hello');
+        }
+        // const screenPos = (window.innerHeight)-350;
+
+        const header = document.querySelector('.header');
+        let height = header.getBoundingClientRect().height;
 
         // const screenPos = pageYOffset;
 
@@ -104,7 +110,7 @@ setTimeout(() => {
         const skillsPos = skills.getBoundingClientRect().top;
         const projectsPos = projects.getBoundingClientRect().top;
         // const contactPos = contact.getBoundingClientRect().top;
-        
+
         // console.log('screen: ', screenPos);
         // console.log('Home: ', homePos);
         // console.log('skills: ', skillsPos);
@@ -112,21 +118,21 @@ setTimeout(() => {
         // console.log('contact: ', contactPos);
 
         // When all the conditions are wrapped in if it checks all the 3 condition and since screenPos always stays > skillsPos when going down it will put active class on skillsPos and then remove it instantly when it will check the 3rd condition screenPos > projectsPos and it will make that active instead if screenpos is not greater than projectPos then it will use the 2nd if condition.
-        
+
         // While screenpos is smaller than home element's position make home
-        if (screenPos > homePos) {
+        if (height > homePos) {
             document.querySelector('.active').classList.remove('active')
             aHome.classList.add('active');
         }
-        if (screenPos > skillsPos) {
+        if (height > skillsPos) {
             document.querySelector('.active').classList.remove('active')
             aSkills.classList.add('active');
         }
-        if (screenPos > projectsPos) {
+        if (height > projectsPos) {
             document.querySelector('.active').classList.remove('active')
             aProjects.classList.add('active');
         }
-        
+
         // if(screenPos > contactPos){
         //     document.querySelector('.active').classList.remove('active')
         //     aContact.classList.add('active');
@@ -181,47 +187,71 @@ AOS.init();
 // Added empty brackets to not reuse already declared const and  let variables
 
 {
-    
+    const header = document.querySelector('.header');
+
+    // Height - 10 so that the a element also highlights when it scrolls down
+    let height = header.getBoundingClientRect().height-10;
+
+    // If we want more accurate scroll make sure there is not much padding from top for the element
+
     {
         // Skills Element
         const skill_El = document.getElementById('skills');
         const aSkills = document.querySelector('.a-skills');
 
+        console.log(header.getBoundingClientRect());
+
+
         let y = skill_El.getBoundingClientRect().y;
-        
+        // console.log(skill_El.getBoundingClientRect());
+
         aSkills.addEventListener('click', () => {
-            if(window.screen.width < 600){
-                
-                window.scrollTo(0, y - 250);    
-            }
-            window.scrollTo(0, y - 250);    
-        })
+
+            window.scrollTo(0, y-height);
         
-        // console.log(skill_El.getBoundingClientRect().top)
-    }
+        })
+
     
+    }
+
     {
         // Projects Element
-        
+
         const projects_El = document.getElementById('projects');
         const aProjects = document.querySelector('.a-projects');
-        
+
         let y = projects_El.getBoundingClientRect().y;
 
 
 
         aProjects.addEventListener('click', () => {
 
-            if(window.screen.width < 600){
-                window.scrollTo(0, y-300);
-                
-            }else{
-                window.scrollTo(0, y-200);
-            }
-            
+            // if(window.screen.width < 600){
+            //     window.scrollTo(0,y);
+
+            // }
+
+            window.scrollTo(0, y - height);
+
+
         })
 
-        // console.log(projects_El.getBoundingClientRect().top)
     }
 
 }
+
+/*
+function setUpTopNavBarEventListeners(){
+    setUpSkillsClickEventListeners();
+}
+
+function setupEventListeners(){
+    setUpTopNavBarEventListeners();
+}
+
+function init(){}
+    setupEventListeners();
+    initializeAnalyticsLibrary();
+}
+
+*/
