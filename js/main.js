@@ -100,7 +100,7 @@ setTimeout(() => {
         // const screenPos = (window.innerHeight)-350;
 
         const header = document.querySelector('.header');
-        let height = header.getBoundingClientRect().height;
+        let height = header.getBoundingClientRect().height+30;
 
         // const screenPos = pageYOffset;
 
@@ -190,7 +190,7 @@ AOS.init();
     const header = document.querySelector('.header');
 
     // Height - 10 so that the a element also highlights when it scrolls down
-    let height = header.getBoundingClientRect().height-10;
+    let height = header.getBoundingClientRect().height;
 
     // If we want more accurate scroll make sure there is not much padding from top for the element
 
