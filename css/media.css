@@ -64,7 +64,7 @@
 
     #home {
         flex-direction: column-reverse;
-        padding: 5vw 5%;
+        padding: 2vw 5%;
         margin-top: 20vh;
     }
 
@@ -75,7 +75,7 @@
     }
 
     .home-content h1 {
-        font-size: 8vw;
+        font-size: 10vw;
     }
 
     .home-content h3 {
@@ -98,7 +98,7 @@
         border: 1vw solid #00abf0;
     }
 
-    .btn {
+    .home-content .btn {
         font-size: 3.5vw;
         padding: 2vw 4vw;
     }
@@ -110,36 +110,94 @@
     }
 
     #skills {
-        margin: 18vh 10% 5vh 10%;
+        /* margin: 30vh 10% 30vh 10%; */
+        margin: 25vh 10%;
         box-shadow: 1px 0 10px black;
     }
 
     #skills h2 {
-        font-size: 5vw;
+        font-size: 12vw;
+    }
+
+    #skills .skill-bar{
+        height: 3vw;
+        width: 90%;
+    }
+
+    .skill-bar .skill-per{
+        height: 3vw;
     }
 
     #skills .skill-name {
-        font-size: 3vw;
+        font-size: 7vw;
     }
 
     .ri-html5-fill {
         color: orange;
-        font-size: 5vw;
+        font-size: 7vw;
     }
 
     .ri-css3-fill {
         color: #00abf0;
-        font-size: 5vw;
+        font-size: 7vw;
     }
 
     .ri-javascript-fill {
         color: yellow;
-        font-size: 5vw;
+        font-size: 7vw;
     }
 
     .fa-node {
-        font-size: 5vw;
+        font-size: 7vw;
         color: green;
+    }
+
+    #projects{
+        /* margin: 30vh 10% 30vh 10%; */
+        margin: 20vh 10%;
+        box-shadow: 1px 0 10px black;
+    }
+
+    #projects h2{
+        font-size: 12vw;
+    }
+
+    #projects .project-outer{
+        flex-direction: column;
+    }
+
+    #projects .project{
+
+        width: 80%;
+        padding: 7vw;
+        margin: 5vw 0;
+    }
+
+    #projects .project-1 img{
+        width: 80%;
+    }
+    #projects .project-1 img{
+        width: 100%;
+    }
+
+
+
+    .project h3{
+        font-size: 5vw;
+    }
+
+    .project h5{
+        font-size: 2vw;
+        text-align: center;
+    }
+
+    .project .btn-box .btn{
+        font-size: 3.5vw;
+        padding: 1vw 5vw;
+    }
+
+    #contact{
+        margin: 25vh 10%;
     }
 
 }
