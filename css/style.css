@@ -420,15 +420,21 @@ span{
 }
 
 .project .btn-box .btn{
-    text-decoration: none;
-    color: #00abf0;
-    background-color: white;
     border-radius: 50px;
     padding: 0.5vw 1vw;
     margin: 0 0.3vw;
     font-size: 1.1vw;
     font-weight: bold;
     cursor: pointer;
+    text-decoration: none;
+}
+.project-1 .btn-box .btn{
+    color: #00abf0;
+    background-color: white;
+}
+.project-2 .btn-box .btn{
+    color: #00abf0;
+    background-color: white;
 }
 
 .btn-box .btn:hover{

@@ -87,7 +87,6 @@ setTimeout(() => {
     // Navbar anchor tag elements
     const aHome = document.querySelector('.a-home');
     const aSkills = document.querySelector('.a-skills');
-    // const aAbout = document.querySelector('.a-about');
     const aProjects = document.querySelector('.a-projects');
     // const aContact = document.querySelector('.a-contact')
 
@@ -99,8 +98,9 @@ setTimeout(() => {
         }
         // const screenPos = (window.innerHeight)-350;
 
+        // Height + 80 so that it changes its color when we click on a element to scroll down because the a element only scrolls down just above the top of skillPos and other elementPos
         const header = document.querySelector('.header');
-        let height = header.getBoundingClientRect().height+30;
+        let height = header.getBoundingClientRect().height+80;
 
         // const screenPos = pageYOffset;
 
@@ -111,11 +111,6 @@ setTimeout(() => {
         const projectsPos = projects.getBoundingClientRect().top;
         // const contactPos = contact.getBoundingClientRect().top;
 
-        // console.log('screen: ', screenPos);
-        // console.log('Home: ', homePos);
-        // console.log('skills: ', skillsPos);
-        // console.log('projects: ', projectsPos);
-        // console.log('contact: ', contactPos);
 
         // When all the conditions are wrapped in if it checks all the 3 condition and since screenPos always stays > skillsPos when going down it will put active class on skillsPos and then remove it instantly when it will check the 3rd condition screenPos > projectsPos and it will make that active instead if screenpos is not greater than projectPos then it will use the 2nd if condition.
 
@@ -190,7 +185,8 @@ AOS.init();
     const header = document.querySelector('.header');
 
     // Height - 10 so that the a element also highlights when it scrolls down
-    let height = header.getBoundingClientRect().height;
+    
+    let height = header.getBoundingClientRect().height-10;
 
     // If we want more accurate scroll make sure there is not much padding from top for the element
 
@@ -207,7 +203,7 @@ AOS.init();
 
         aSkills.addEventListener('click', () => {
 
-            window.scrollTo(0, y-height);
+            window.scrollTo(0, y - height);
         
         })
 
