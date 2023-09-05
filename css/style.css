@@ -20,7 +20,7 @@ body{
 /* --------------------------------------------------- Header ------------------------------------------------------------------ */
 
 .header{
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -91,7 +91,7 @@ body{
 
 #home{
     /* used margin top 20vh because while making it responsive when the screen size is reduced the vertical height increases so it maintains the margin well rather than vw because whem screen size because smaller the viewport width recuces and height increases */
-    margin-top: 20vh;
+    margin-top: 10vh;
     /* margin-top: 9vmax; */
     position: relative;
     width: 100%;

@@ -186,7 +186,7 @@ AOS.init();
 
     // Height - 10 so that the a element also highlights when it scrolls down
     
-    let height = header.getBoundingClientRect().height-10;
+    let height = header.getBoundingClientRect().height + 100;
 
     // If we want more accurate scroll make sure there is not much padding from top for the element
 
