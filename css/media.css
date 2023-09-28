@@ -2,6 +2,9 @@
 
     .header {
         padding: 20px 7%;
+    }
+
+    #headContainer{
         flex-direction: column;
         align-items: start;
     }
@@ -64,8 +67,8 @@
 
     #home {
         flex-direction: column-reverse;
-        padding: 2vw 5%;
-        margin-top: 20vh;
+        padding: 2vw 0%;
+        margin-top: 10vh;
     }
 
     .home-content {
@@ -104,32 +107,33 @@
     }
 
     #home .home-img {
-        width: 60%;
+        width: 80%;
         margin-bottom: 2vh;
         justify-content: center;
     }
 
     #skills {
         /* margin: 30vh 10% 30vh 10%; */
-        margin: 20vh 10%;
+        margin: 20vh 5%;
+        padding: 5vw 5vw 10vw 5vw;
         box-shadow: 1px 0 10px black;
     }
 
     #skills h2 {
-        font-size: 12vw;
+        font-size: 10vw;
     }
 
     #skills .skill-bar{
-        height: 3vw;
+        height: 2vw;
         width: 90%;
     }
 
     .skill-bar .skill-per{
-        height: 3vw;
+        height: 2vw;
     }
 
     #skills .skill-name {
-        font-size: 7vw;
+        font-size: 4vw;
     }
 
     .ri-html5-fill {
@@ -159,7 +163,7 @@
     }
 
     #projects h2{
-        font-size: 12vw;
+        font-size: 10vw;
     }
 
     #projects .project-outer{
@@ -168,16 +172,18 @@
 
     #projects .project{
 
-        width: 80%;
-        padding: 7vw;
+        width: 100%;
+        padding: 2vw;
         margin: 5vw 0;
+        min-width: 30%;
+        min-height: 25vw;
     }
 
     #projects .project-1 img{
         width: 80%;
     }
     #projects .project-1 img{
-        width: 100%;
+        width: 80%;
     }
 
 
