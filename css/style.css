@@ -24,15 +24,21 @@ body{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px 5%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
     /* background-color: #1f242d; */
     background-color: rgb(8, 19, 28);
     border-bottom: 3px solid #00abf0;
+    z-index: 2;
+}
+
+#headContainer{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px 5%;
+    background: transparent;
+    background-color: rgb(8, 19, 28);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo{
@@ -50,11 +56,11 @@ body{
 
 
 .logo img{
-    width: 7vw;
+    width: 5vw;
 }
 
 .navbar a{
-    font-size: 1.2vw;
+    font-size: 1vw;
     color: white;
     text-decoration: none;
     font-weight: 500;
@@ -86,17 +92,21 @@ body{
     display: none;
 }
 
+#container{
+    width: 90%;
+    margin: 0 auto;
+}
 
 /* ------------------------------------------------------------ HOME ------------------------------------------------------------ */
 
 #home{
     /* used margin top 20vh because while making it responsive when the screen size is reduced the vertical height increases so it maintains the margin well rather than vw because whem screen size because smaller the viewport width recuces and height increases */
-    margin-top: 10vh;
+    margin: 10vh 0px;
     /* margin-top: 9vmax; */
     position: relative;
     width: 100%;
     /* height: 80vh;   */
-    padding: 4vw 10% 10vw 10%;
+    padding: 4vw 10%;
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
@@ -110,7 +120,7 @@ body{
 
 
 .home-content h3{
-    font-size: 2vw;
+    font-size: 1.3vw;
     font-weight: 600;
     /* Opacity made 0 for animation */
     opacity: 0;
@@ -146,7 +156,7 @@ body{
 } */
 
 .home-content h1{
-    font-size: 4vw;
+    font-size: 3vw;
     font-weight: bold;
     /* text-shadow: 5px 5px 30px black; */
     /* Animation */
@@ -176,17 +186,17 @@ span{
 }
 
 .social-media{
-    margin: 1vw 0 2vw 0;
+    margin: 1vw 0 1vw 0;
     display: flex;
     padding: 0.5vw 0 1vw 0;   
 }
 
 .social-media a i{
-    border: 0.3vw solid #00abf0;
-    padding: 0.5vw;
+    border: 0.2vw solid #00abf0;
+    padding: 0.4vw;
     border-radius: 50px;
     margin-right: 1vw;
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     color: #00abf0;
     animation: slideLeft 1s ease forwards;
     opacity: 0;
@@ -203,11 +213,11 @@ span{
 .home-content .btn{
     color: white;
     border: 0.2vw solid #00abf0;
-    padding: 1vw 2vw;
+    padding: 0.5vw 1.2vw;
     background-color: #00abf0;
     border-radius: 50px;
     text-decoration: none;
-    font-size: 1.2vw;
+    font-size: 1vw;
     box-shadow: 5px 0 20px #00abf0;
     font-weight: 600;
     /* Animation */
@@ -246,8 +256,8 @@ span{
 
 #skills{
     /* border: 1px solid red; */
-    margin: 25vh 10% 15vh 10%;
-    padding: 2vw 2vw 5vw 2vw;
+    margin: 25vh 5% 20vh 5%;
+    padding: 0 10%;
     /* box-shadow: 5px 0px 20px black; */
     border-radius: 20px;
     display: flex;
@@ -256,7 +266,7 @@ span{
 }
 
 #skills h2{
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-weight: 700;
     text-align: center;
     padding: 1vw 0 1vw 0;
@@ -266,7 +276,7 @@ span{
 }
 
 .skill{
-    padding: 1vw;
+    padding: 0.5vw;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
@@ -274,14 +284,14 @@ span{
 }
 
 .skill-name{
-    font-size: 1.3vw;
+    font-size: 1.1vw;
     font-weight: 500;
 }
 
 
 .skill-bar{
     background-color: rgb(26, 30, 37);
-    height: 1vw;
+    height: 0.6vw;
     margin: 0.8vw 0 0.8vw 1vw;
     width: 80%;
     border-radius: 5px;
@@ -289,7 +299,7 @@ span{
 
 .skill-per{
     border-radius: 5px;
-    height: 1vw;
+    height: 0.6vw;
     /* Animation added in JS */
     /* animation: toRight 3s ease-in-out forwards; */
     width: 0;
@@ -319,34 +329,34 @@ span{
 /* colors for language icons*/
 .ri-html5-fill{
     color: orange;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 .ri-css3-fill{
     color: #00abf0;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 .ri-javascript-fill{
     color: yellow;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 .fa-node{
-    font-size: 2vw;
+    font-size: 1.5vw;
     color: green;
 }
 
 /* Projects */
 
 #projects{
-    margin: 15vh 10%;
+    margin: 15vh 5%;
     margin-bottom: 30vh;
-    padding: 2vw 2vw;
+    padding: 2vw 10%;
     /* box-shadow: 5px 0px 20px black; */
     border-radius: 20px;
 }
 
 #projects h2{
-    font-size: 3vw;
+    font-size: 2.5vw;
     font-weight: 700;
     text-align: center;
     padding: 1vw 0 1vw 0;
@@ -374,9 +384,9 @@ span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 33%;
-    padding: 1vw;
-    min-height: 25vw;
+    width: 30%;
+    padding: 0.2vw;
+    min-height: 18vw;
     border-radius: 20px;
     /* cursor: pointer; */
     background-color: #00abf0;
@@ -384,7 +394,7 @@ span{
 }
 
 .project-1 img{
-    width: 80%;
+    width: 60%;
     border-bottom: px solid white;
 }
 #projects .project-2{
@@ -392,9 +402,9 @@ span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 33%;
-    padding: 1vw;
-    min-height: 25vw;
+    width: 30%;
+    padding: 0.2vw;
+    min-height: 18vw;
     border-radius: 20px;
     /* cursor: pointer; */
     background-color: crimson;
@@ -402,17 +412,18 @@ span{
 }
 
 .project-2 img{
-    width: 100%;
+    width: 80%;
 }
 
 
 
 .project h3{
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 .project h5{
-    font-size: 0.9vw;
+    font-size: 0.7vw;
+    text-align: center;
 }
 
 .project .btn-box{
@@ -423,7 +434,7 @@ span{
     border-radius: 50px;
     padding: 0.5vw 1vw;
     margin: 0 0.3vw;
-    font-size: 1.1vw;
+    font-size: 0.8vw;
     font-weight: bold;
     cursor: pointer;
     text-decoration: none;
@@ -433,7 +444,7 @@ span{
     background-color: white;
 }
 .project-2 .btn-box .btn{
-    color: #00abf0;
+    color: crimson;
     background-color: white;
 }
 

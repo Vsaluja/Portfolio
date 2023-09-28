@@ -201,3 +201,20 @@
     }
 
 }
+
+@media(min-width: 1800px){
+    #headContainer{
+        max-width: 85%;
+    }
+    
+    #container{
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    #home{
+        padding: 4vw 5%;
+    }
+
+    
+}

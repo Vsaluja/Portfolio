@@ -11,18 +11,20 @@
 
     #home{
         margin-top: 12vh;
+        padding: 4vw 2% 10vw 10%;
     }
+
 
     .home-content h1{
         font-size: 6vw;   
     }
 
     .home-content h3{
-        font-size: 4vw;
+        font-size: 3vw;
     }
 
     .home-img img{
-        width: 90%;
+        width: 60%;
     }
 
     .social-media a i{
@@ -30,7 +32,8 @@
     }
 
     .home-content .btn{
-        font-size: 2.5vw;
+        font-size: 1.5vw;
+        padding: 0.5vw 1.2vw
     }
 
     /* Skills */
